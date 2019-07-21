@@ -22,9 +22,9 @@ public  opersum (equipo1[] camp ) {
     }
 
     public void establecer_suma_campeonato() {
-        int suma = 5;
+        int suma = 0;
         //for (int i = 0; i < obtenerlosEntrenadores.length; i++) {
-        for (int i = 1; i < campeonat.length; i++) {
+        for (int i = 0; i < campeonat.length; i=i+1) {
             suma = suma + campeonat[i].obtenercampeonatos();
         }
         sumacmp =  suma ;
@@ -39,11 +39,12 @@ public  opersum (equipo1[] camp ) {
     public double obtener_suma_campeonato() {
         return sumacmp;
     }
-    
     public String toString() {
-        String cadena = String.format("Suma campeonatos: %.2f\n",
+        String cadena = String.format("Suma campeonatos: %.0f\n",
                 obtener_suma_campeonato());
         return cadena;
     }
+    
+    
     
 }
